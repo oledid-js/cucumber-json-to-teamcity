@@ -3,10 +3,10 @@
 const fs = require("fs");
 const path = require("path");
 const expect = require("chai").expect;
-const api = require("../index");
+const api = require("../src/index");
 
 module.exports = function () {
-	this.Given(/^(I do not know how to use this api)|(I know how to use this api)$/, (dummy1, dummy2, callback) => {
+	this.Given(/^(that I do not know how to use this api)|(that I know how to use this api)$/, (dummy1, dummy2, callback) => {
 		callback();
 	});
 
@@ -27,7 +27,7 @@ module.exports = function () {
 	});
 
 	this.When(/^I call it with a json-string as the single argument$/, function (callback) {
-		fs.readFile(path.join(__dirname, "../cucumberJson.json"), {
+		fs.readFile(path.join(__dirname, "resources/cucumberJson.json"), {
 			encoding: "utf8"
 		}, (err, data) => {
 			if (err) {
@@ -39,12 +39,12 @@ module.exports = function () {
 	});
 
 	this.When(/^I call it with a file path as the single argument$/, function () {
-		this.result = api.bind(api, path.join(__dirname, "../cucumberJson.json"));
+		this.result = api.bind(api, path.join(__dirname, "resources/cucumberJson.json"));
 	});
 
 	this.Then(/^I should see the correct TeamCity service messages$/, function (callback) {
 		const results = this.result.call();
-		fs.readFile(path.join(__dirname, "../expectedOutput.txt"), "utf8", (err, data) => {
+		fs.readFile(path.join(__dirname, "resources/expectedOutput.txt"), "utf8", (err, data) => {
 			if (err) {
 				throw err;
 			}

@@ -1,0 +1,347 @@
+[
+  {
+    "description": "\tAs a developer\n\tI want to have a feature I can use for testing\n\tIn order to implement this test-formatting API",
+    "elements": [
+      {
+        "id": "a-mock-feature;a-passing-test",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "A passing test",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before ",
+            "result": {
+              "status": "passed",
+              "duration": 338990
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:6"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "something",
+            "result": {
+              "status": "passed",
+              "duration": 261411
+            },
+            "line": 9,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "something",
+            "result": {
+              "status": "passed",
+              "duration": 102934
+            },
+            "line": 10,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the test should pass",
+            "result": {
+              "status": "passed",
+              "duration": 156666
+            },
+            "line": 11,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 137045
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:10"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@mockup",
+            "line": 1
+          },
+          {
+            "name": "@passing",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "a-mock-feature;a-failing-test",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "A failing test",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before ",
+            "result": {
+              "status": "passed",
+              "duration": 84220
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:6"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "something",
+            "result": {
+              "status": "passed",
+              "duration": 87238
+            },
+            "line": 15,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "something",
+            "result": {
+              "status": "passed",
+              "duration": 85729
+            },
+            "line": 16,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the test should fail",
+            "result": {
+              "status": "failed",
+              "duration": 2089783,
+              "error_message": "AssertionError: expected true to equal false\n    at World.<anonymous> (C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:26:21)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
+            },
+            "line": 17,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 87237
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:10"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@mockup",
+            "line": 1
+          },
+          {
+            "name": "@failing",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "a-mock-feature;a-pending-test",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "A pending test",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before ",
+            "result": {
+              "status": "passed",
+              "duration": 85427
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:6"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "something",
+            "result": {
+              "status": "passed",
+              "duration": 91162
+            },
+            "line": 21,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "something",
+            "result": {
+              "status": "passed",
+              "duration": 84823
+            },
+            "line": 22,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the test should be ignored",
+            "result": {
+              "status": "pending"
+            },
+            "line": 23,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 84521
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:10"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@mockup",
+            "line": 1
+          },
+          {
+            "name": "@pending",
+            "line": 19
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "a-mock-feature;a-test-that-throws-an-error",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "A test that throws an error",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before ",
+            "result": {
+              "status": "passed",
+              "duration": 84521
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:6"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "something",
+            "result": {
+              "status": "passed",
+              "duration": 97502
+            },
+            "line": 27,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "something",
+            "result": {
+              "status": "passed",
+              "duration": 90860
+            },
+            "line": 28,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the test should throw an error",
+            "result": {
+              "status": "failed",
+              "duration": 120141,
+              "error_message": "Error: I am an error\n    at World.<anonymous> (C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:33:11)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
+            },
+            "line": 29,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 85427
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:10"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@mockup",
+            "line": 1
+          },
+          {
+            "name": "@throws",
+            "line": 25
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "a-mock-feature",
+    "keyword": "Feature",
+    "line": 2,
+    "name": "A mock feature",
+    "tags": [
+      {
+        "name": "@mockup",
+        "line": 1
+      }
+    ],
+    "uri": "C:/Git/oledid/cucumber-json-to-teamcity/features/resources/mock.feature"
+  }
+]

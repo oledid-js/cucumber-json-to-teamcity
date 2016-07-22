@@ -1,7 +1,7 @@
 "use strict";
 
 const expect = require("chai").expect;
-const escapeString = require("../escapeString");
+const escapeString = require("../src/escapeString");
 
 module.exports = function () {
 	this.Given(/^a string (.*)$/, function (input, callback) {

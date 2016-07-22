@@ -44,7 +44,7 @@ module.exports = function (jsonStringOrPath) {
 			output.push(line);
 		}
 	}
-	// fs.writeFileSync(path.join(__dirname, "expectedOutput.txt"), output.join("\n"), {encoding: "utf8"});
+	fs.writeFileSync(path.join(__dirname, "../features/resources/expectedOutput.txt"), output.join("\n"), {encoding: "utf8"});
 	return output;
 };
 
