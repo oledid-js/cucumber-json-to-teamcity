@@ -9,6 +9,9 @@ Handlebars.registerHelper("milliseconds", ticks => {
 });
 
 Handlebars.registerHelper("clean", str => {
+	if (!str) {
+		return "";
+	}
 	return str
 		.replace(/\|/, "||")
 		.replace(/'/g, "|'")
