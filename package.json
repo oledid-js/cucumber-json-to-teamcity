@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Pipe a cucumber.js json-report to teamcity service messages",
   "main": "index.js",
+  "src": [
+    "index.js",
+    "template.html"
+  ],
   "scripts": {
     "test": "npm run xo && cucumber-js",
     "xo": "xo {*,features/**/}*.{js}"
