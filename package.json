@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "test": "npm run xo && cucumber-js",
-    "xo": "xo {*,features/**/}*.{js}"
+    "xo": "xo **/*.js"
   },
   "repository": {
     "type": "git",
@@ -51,7 +51,8 @@
         {
           "case": "camelCase"
         }
-      ]
+      ],
+      "babel/new-cap": 0
     }
   }
 }

@@ -9,7 +9,7 @@ module.exports = function () {
 	this.World = function () {
 	};
 
-	this.Given(/^(I do not know how to use this module)|(I know how to use this module)$/, function (dummy1, dummy2, callback) {
+	this.Given(/^(I do not know how to use this module)|(I know how to use this module)$/, (dummy1, dummy2, callback) => {
 		callback();
 	});
 
@@ -33,6 +33,9 @@ module.exports = function () {
 		fs.readFile(path.join(__dirname, "../cucumberJson.json"), {
 			encoding: "utf8"
 		}, (err, data) => {
+			if (err) {
+				throw err;
+			}
 			this.result = api.bind(api, data);
 			callback();
 		});
@@ -45,6 +48,9 @@ module.exports = function () {
 	this.Then(/^I should see the correct TeamCity service messages$/, function (callback) {
 		const results = this.result.call();
 		fs.readFile(path.join(__dirname, "../expectedOutput.txt"), "utf8", (err, data) => {
+			if (err) {
+				throw err;
+			}
 			expect(results).to.eql(data.split("\n"));
 			callback();
 		});
