@@ -1,6 +1,6 @@
 {
   "name": "cucumber-json-to-teamcity",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Translate a cucumber.js json-report to teamcity service messages",
   "main": "index.js",
   "src": [

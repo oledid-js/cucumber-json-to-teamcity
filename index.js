@@ -8,6 +8,16 @@ Handlebars.registerHelper("milliseconds", ticks => {
 	return new Date(ticks).getMilliseconds();
 });
 
+Handlebars.registerHelper("clean", str => {
+	return str
+		.replace(/\|/, "||")
+		.replace(/'/g, "|'")
+		.replace(/\n/g, "|n")
+		.replace(/\r/g, "|r")
+		.replace(/\[/g, "|[")
+		.replace(/\]/g, "|]");
+});
+
 module.exports = function (jsonStringOrPath) {
 	if (arguments.length !== 1 || !jsonStringOrPath || jsonStringOrPath.length === 0 || typeof jsonStringOrPath !== typeof "string") {
 		throw new Error(`Invalid argument. Expected a single string argument containing either valid json or valid path to json file, but was actually: [${Array.prototype.slice.call(arguments).join(", ")}]`);
@@ -39,7 +49,7 @@ module.exports = function (jsonStringOrPath) {
 			output.push(line);
 		}
 	}
-	// fs.writeFileSync(path.join(__dirname, "expectedOutput.txt"), output.join("\n"), {encoding: "utf8" });
+	// fs.writeFileSync(path.join(__dirname, "expectedOutput.txt"), output.join("\n"), {encoding: "utf8"});
 	return output;
 };
 

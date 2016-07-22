@@ -1,15 +1,15 @@
 <script>
 {{#each this}}
 	{{#each elements}}
-		##teamcity[testSuiteStarted name='{{name}}']
+		##teamcity[testSuiteStarted name='{{clean name}}']
 		{{#each steps}}
-			##teamcity[testStarted name='{{keyword}}{{name}}' captureStandardOutput='false']
+			##teamcity[testStarted name='{{clean keyword}}{{clean name}}' captureStandardOutput='false']
 			{{#if failed}}
-				##teamcity[testFailed name='{{../keyword}}{{../name}}' message='{{errorMessage}}' details='{{stacktrace}}']
+				##teamcity[testFailed name='{{clean ../keyword}}{{clean ../name}}' message='{{clean errorMessage}}' details='{{clean stacktrace}}']
 			{{/if}}
-			##teamcity[testFinished name='{{keyword}}{{name}}' duration='{{milliseconds result.duration}}']
+			##teamcity[testFinished name='{{clean keyword}}{{clean name}}' duration='{{milliseconds result.duration}}']
 		{{/each}}
-		##teamcity[testSuiteFinished name='{{name}}']
+		##teamcity[testSuiteFinished name='{{clean name}}']
 	{{/each}}
 {{/each}}
 </script>

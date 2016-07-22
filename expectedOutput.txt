@@ -20,9 +20,6 @@
 ##teamcity[testStarted name='When I call it with a file path as the single argument' captureStandardOutput='false']
 ##teamcity[testFinished name='When I call it with a file path as the single argument' duration='631']
 ##teamcity[testStarted name='Then I should see the correct TeamCity service messages' captureStandardOutput='false']
-##teamcity[testFailed name='ScenarioCalling the API with a file path' message='AssertionError: expected false to equal true' details='
-at null.&lt;anonymous&gt; (C:\Git\oledid\cucumber-json-to-teamcity\features\api.steps.js:44:28)
-at nextTickCallbackWith0Args (node.js:420:9)
-']
+##teamcity[testFailed name='ScenarioCalling the API with a file path' message='AssertionError: expected false to equal true' details='|n    at null.&lt;anonymous&gt; (C:\Git\oledid\cucumber-json-to-teamcity\features\api.steps.js:44:28)|n    at nextTickCallbackWith0Args (node.js:420:9)|n ']
 ##teamcity[testFinished name='Then I should see the correct TeamCity service messages' duration='650']
 ##teamcity[testSuiteFinished name='Calling the API with a file path']
