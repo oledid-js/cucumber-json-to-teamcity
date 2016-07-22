@@ -23,6 +23,11 @@ for (let i = 0; i < lines.length; ++i) {
 ```
 
 
+## Related
+
+- [cucumber-json-to-teamcity-cli](https://github.com/oledid/cucumber-json-to-teamcity-cli) - CLI for this module
+
+
 ## License
 
 MIT © [Ole Morten Didriksen](https://github.com/oledid)
