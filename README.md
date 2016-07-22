@@ -1,2 +1,2 @@
 # cucumber-json-to-teamcity
-Pipe the cucumber.js json-report to teamcity service messages
+Pipe a cucumber.js json-report to teamcity service messages

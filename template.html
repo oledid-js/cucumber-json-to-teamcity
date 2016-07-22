@@ -1,0 +1,15 @@
+<script>
+{{#each this}}
+	{{#each elements}}
+		##teamcity[testSuiteStarted name='{{name}}']
+		{{#each steps}}
+			##teamcity[testStarted name='{{keyword}}{{name}}' captureStandardOutput='false']
+			{{#if failed}}
+				##teamcity[testFailed name='{{../keyword}}{{../name}}' message='{{errorMessage}}' details='{{stacktrace}}']
+			{{/if}}
+			##teamcity[testFinished name='{{keyword}}{{name}}' duration='{{milliseconds result.duration}}']
+		{{/each}}
+		##teamcity[testSuiteFinished name='{{name}}']
+	{{/each}}
+{{/each}}
+</script>

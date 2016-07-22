@@ -1,0 +1,53 @@
+{
+  "name": "cucumber-json-to-teamcity",
+  "version": "0.0.1",
+  "description": "Pipe a cucumber.js json-report to teamcity service messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run xo && cucumber-js",
+    "xo": "xo {*,features/**/}*.{js}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oledid/cucumber-json-to-teamcity.git"
+  },
+  "keywords": [
+    "cucumber",
+    "teamcity"
+  ],
+  "author": "Ole Morten Didriksen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oledid/cucumber-json-to-teamcity/issues"
+  },
+  "homepage": "https://github.com/oledid/cucumber-json-to-teamcity#readme",
+  "dependencies": {
+    "cucumber": "^1.2.1",
+    "handlebars": "^4.0.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node"
+    ],
+    "rules": {
+      "quotes": [
+        2,
+        "double",
+        {
+          "allowTemplateLiterals": true
+        }
+      ],
+      "xo/filename-case": [
+        "error",
+        {
+          "case": "camelCase"
+        }
+      ]
+    }
+  }
+}
