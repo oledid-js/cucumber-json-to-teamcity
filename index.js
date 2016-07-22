@@ -3,22 +3,14 @@
 const fs = require("fs");
 const path = require("path");
 const Handlebars = require("handlebars");
+const escapeString = require("./escapeString");
 
 Handlebars.registerHelper("milliseconds", ticks => {
 	return new Date(ticks).getMilliseconds();
 });
 
 Handlebars.registerHelper("clean", str => {
-	if (!str) {
-		return "";
-	}
-	return str
-		.replace(/\|/, "||")
-		.replace(/'/g, "|'")
-		.replace(/\n/g, "|n")
-		.replace(/\r/g, "|r")
-		.replace(/\[/g, "|[")
-		.replace(/\]/g, "|]");
+	return escapeString(str);
 });
 
 module.exports = function (jsonStringOrPath) {

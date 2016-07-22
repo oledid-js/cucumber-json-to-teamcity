@@ -6,10 +6,7 @@ const expect = require("chai").expect;
 const api = require("../index");
 
 module.exports = function () {
-	this.World = function () {
-	};
-
-	this.Given(/^(I do not know how to use this module)|(I know how to use this module)$/, (dummy1, dummy2, callback) => {
+	this.Given(/^(I do not know how to use this api)|(I know how to use this api)$/, (dummy1, dummy2, callback) => {
 		callback();
 	});
 
