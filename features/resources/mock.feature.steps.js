@@ -37,7 +37,5 @@ module.exports = function () {
 				callback(null, "pending");
 			}
 		}
-
-		return null;
 	});
 };

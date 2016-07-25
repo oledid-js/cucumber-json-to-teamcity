@@ -27,3 +27,9 @@ Scenario: A test that throws an error
 	Given something
 	When something
 	Then the test should throw an error
+
+@undefined
+Scenario: An undefined test
+	Given something
+	When something
+	Then the test is not defined

@@ -4,9 +4,9 @@ Feature: Escaping values
 	In order to be able to parse the service messages
 
 Scenario: Escaping apostrophe
-	Given a string It's fun to test
+	Given a string It's fun to test things
 	When the string is escaped
-	Then the string should be It|'s fun to test
+	Then the string should be It|'s fun to test things
 
 Scenario: Escaping line feed (\n) and carriage return (\r)
 	Given a haiku by Issa
