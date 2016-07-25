@@ -44,6 +44,7 @@ module.exports = function () {
 
 	this.Then(/^I should see the correct TeamCity service messages$/, function (callback) {
 		const results = this.result.call();
+		// fs.writeFileSync(path.join(__dirname, "resources/expectedOutput.txt"), results.join("\n"), {encoding: "utf8"});
 		fs.readFile(path.join(__dirname, "resources/expectedOutput.txt"), "utf8", (err, data) => {
 			if (err) {
 				throw err;

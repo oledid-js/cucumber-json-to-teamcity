@@ -5,7 +5,7 @@ module.exports = function (str) {
 		return "";
 	}
 	return str
-		.replace(/\|/, "||")
+		.replace(/\|/g, "||")
 		.replace(/'/g, "|'")
 		.replace(/\n/g, "|n")
 		.replace(/\r/g, "|r")

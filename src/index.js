@@ -6,7 +6,10 @@ const Handlebars = require("handlebars");
 const escapeString = require("./escapeString");
 
 Handlebars.registerHelper("milliseconds", ticks => {
-	return new Date(ticks).getMilliseconds();
+	const value = new Date(ticks).getMilliseconds();
+	return isNaN(value) ?
+		0 :
+		value;
 });
 
 Handlebars.registerHelper("clean", str => {
@@ -44,7 +47,6 @@ module.exports = function (jsonStringOrPath) {
 			output.push(line);
 		}
 	}
-	// fs.writeFileSync(path.join(__dirname, "../features/resources/expectedOutput.txt"), output.join("\n"), {encoding: "utf8"});
 	return output;
 };
 
@@ -60,6 +62,8 @@ function modifyElements(elements) {
 
 function modifyStep(step) {
 	step.failed = step.result.status === "failed";
+	step.pending = step.result.status === "pending";
+	step.isTestUndefined = step.result.status === "undefined";
 
 	if (step.failed) {
 		const newlineIndex = step.result.error_message.indexOf("\n");
@@ -68,7 +72,7 @@ function modifyStep(step) {
 			step.stacktrace = "no stacktrace.";
 		} else {
 			step.errorMessage = step.result.error_message.substring(0, newlineIndex);
-			step.stacktrace = step.result.error_message.substring(newlineIndex, step.result.error_message.length - newlineIndex);
+			step.stacktrace = step.result.error_message.substring(newlineIndex, step.result.error_message.length);
 		}
 	}
 }

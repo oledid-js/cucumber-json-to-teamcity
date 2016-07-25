@@ -5,7 +5,13 @@
 		{{#each steps}}
 			##teamcity[testStarted name='{{clean keyword}}{{clean name}}' captureStandardOutput='false']
 			{{#if failed}}
-				##teamcity[testFailed name='{{clean ../keyword}}{{clean ../name}}' message='{{clean errorMessage}}' details='{{clean stacktrace}}']
+				##teamcity[testFailed name='{{clean keyword}}{{clean name}}' message='{{clean errorMessage}}' details='{{clean stacktrace}}']
+			{{/if}}
+			{{#if pending}}
+				##teamcity[testIgnored name='{{clean keyword}}{{clean name}}' message='']
+			{{/if}}
+			{{#if isTestUndefined}}
+				##teamcity[testIgnored name='{{clean keyword}}{{clean name}}' message='']
 			{{/if}}
 			##teamcity[testFinished name='{{clean keyword}}{{clean name}}' duration='{{milliseconds result.duration}}']
 		{{/each}}
