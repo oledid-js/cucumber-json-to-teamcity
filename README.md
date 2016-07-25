@@ -1,4 +1,4 @@
-# cucumber-json-to-teamcity
+# cucumber-json-to-teamcity [![Build Status](https://travis-ci.org/oledid/cucumber-json-to-teamcity.svg?branch=master)](https://travis-ci.org/oledid/cucumber-json-to-teamcity.svg?branch=master)
 
 > Translate a cucumber.js json-report to teamcity service messages
 
