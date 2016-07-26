@@ -1,12 +1,11 @@
 {
   "name": "cucumber-json-to-teamcity",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Translate a cucumber.js json-report to teamcity service messages",
   "main": "src/index.js",
   "scripts": {
     "test": "npm run xo && cucumber-js --tags ~@mockup",
-    "xo": "xo **/*.js",
-    "generate-json": "npm run xo && cucumber-js --tags @mockup --format json > features/resources/cucumberJson.json"
+    "xo": "xo **/*.js"
   },
   "repository": {
     "type": "git",

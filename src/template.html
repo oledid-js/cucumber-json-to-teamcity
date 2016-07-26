@@ -1,5 +1,6 @@
 <script>
 {{#each this}}
+	##teamcity[testSuiteStarted name='{{clean name}}']
 	{{#each elements}}
 		##teamcity[testSuiteStarted name='{{clean name}}']
 		{{#each steps}}
@@ -17,5 +18,6 @@
 		{{/each}}
 		##teamcity[testSuiteFinished name='{{clean name}}']
 	{{/each}}
+	##teamcity[testSuiteFinished name='{{clean name}}']
 {{/each}}
 </script>

@@ -13,7 +13,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 336877
+              "duration": 386985
             },
             "hidden": true,
             "match": {
@@ -26,7 +26,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 284051
+              "duration": 250544
             },
             "line": 9,
             "match": {
@@ -39,7 +39,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 134932
+              "duration": 101124
             },
             "line": 10,
             "match": {
@@ -52,7 +52,7 @@
             "name": "the test should pass",
             "result": {
               "status": "passed",
-              "duration": 174174
+              "duration": 154251
             },
             "line": 11,
             "match": {
@@ -64,7 +64,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 146705
+              "duration": 156968
             },
             "hidden": true,
             "match": {
@@ -95,7 +95,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 105652
+              "duration": 86030
             },
             "hidden": true,
             "match": {
@@ -108,7 +108,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 99312
+              "duration": 88445
             },
             "line": 15,
             "match": {
@@ -121,7 +121,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 95086
+              "duration": 90860
             },
             "line": 16,
             "match": {
@@ -134,7 +134,7 @@
             "name": "the test should fail",
             "result": {
               "status": "failed",
-              "duration": 2350591,
+              "duration": 3082303,
               "error_message": "AssertionError: expected true to equal false\n    at World.<anonymous> (C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:26:21)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
             },
             "line": 17,
@@ -147,7 +147,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 98105
+              "duration": 107764
             },
             "hidden": true,
             "match": {
@@ -178,7 +178,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 151233
+              "duration": 89049
             },
             "hidden": true,
             "match": {
@@ -191,7 +191,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 158779
+              "duration": 107161
             },
             "line": 21,
             "match": {
@@ -204,7 +204,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 100520
+              "duration": 102632
             },
             "line": 22,
             "match": {
@@ -228,7 +228,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 89954
+              "duration": 90257
             },
             "hidden": true,
             "match": {
@@ -259,7 +259,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 96293
+              "duration": 100519
             },
             "hidden": true,
             "match": {
@@ -272,7 +272,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 96897
+              "duration": 99010
             },
             "line": 27,
             "match": {
@@ -285,7 +285,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 98708
+              "duration": 97501
             },
             "line": 28,
             "match": {
@@ -298,7 +298,7 @@
             "name": "the test should throw an error",
             "result": {
               "status": "failed",
-              "duration": 144894,
+              "duration": 145497,
               "error_message": "Error: I am an error\n    at World.<anonymous> (C:\\Git\\oledid\\cucumber-json-to-teamcity\\features\\resources\\mock.feature.steps.js:33:11)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
             },
             "line": 29,
@@ -311,7 +311,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 93275
+              "duration": 87842
             },
             "hidden": true,
             "match": {
@@ -342,7 +342,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 92068
+              "duration": 83616
             },
             "hidden": true,
             "match": {
@@ -355,7 +355,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 96595
+              "duration": 104746
             },
             "line": 33,
             "match": {
@@ -368,7 +368,7 @@
             "name": "something",
             "result": {
               "status": "passed",
-              "duration": 95992
+              "duration": 95690
             },
             "line": 34,
             "match": {
@@ -389,7 +389,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 89954
+              "duration": 268354
             },
             "hidden": true,
             "match": {
