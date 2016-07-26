@@ -75,7 +75,16 @@ function processOutput(type, json, callback) {
 	switch (type) {
 		case "passing":
 			expect(JSON.parse(json)[0].elements[0].steps[indexOfThenStep].result.status).to.equal("passed");
-			expect(output.replace(/ duration='[0-9]*'/g, "")).to.equal(`##teamcity[testSuiteStarted name='A mock feature']\n##teamcity[testSuiteStarted name='A passing test']\n##teamcity[testStarted name='Before ' captureStandardOutput='false']\n##teamcity[testFinished name='Before ']\n##teamcity[testStarted name='Given something' captureStandardOutput='false']\n##teamcity[testFinished name='Given something']\n##teamcity[testStarted name='When something' captureStandardOutput='false']\n##teamcity[testFinished name='When something']\n##teamcity[testStarted name='Then the test should pass' captureStandardOutput='false']\n##teamcity[testFinished name='Then the test should pass']\n##teamcity[testStarted name='After ' captureStandardOutput='false']\n##teamcity[testFinished name='After ']\n##teamcity[testSuiteFinished name='A passing test']\n##teamcity[testSuiteFinished name='A mock feature']`);
+			expect(output.replace(/ duration='[0-9]*'/g, "")).to.equal(`##teamcity[testSuiteStarted name='|[Feature|] A mock feature']
+##teamcity[testSuiteStarted name='|[Scenario|] A passing test']
+##teamcity[testStarted name='Given something' captureStandardOutput='false']
+##teamcity[testFinished name='Given something' duration='865']
+##teamcity[testStarted name='When something' captureStandardOutput='false']
+##teamcity[testFinished name='When something' duration='66']
+##teamcity[testStarted name='Then the test should pass' captureStandardOutput='false']
+##teamcity[testFinished name='Then the test should pass' duration='175']
+##teamcity[testSuiteFinished name='|[Scenario|] A passing test']
+##teamcity[testSuiteFinished name='|[Feature|] A mock feature']`.replace(/\r/g, "").replace(/ duration='[0-9]*'/g, ""));
 			callback();
 			break;
 		case "failing":

@@ -64,6 +64,7 @@ function modifyStep(step) {
 	step.failed = step.result.status === "failed";
 	step.pending = step.result.status === "pending";
 	step.isTestUndefined = step.result.status === "undefined";
+	step.hidden = step.hidden === true && step.result.status === "passed";
 
 	if (step.failed) {
 		const newlineIndex = step.result.error_message.indexOf("\n");

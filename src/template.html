@@ -1,23 +1,25 @@
 <script>
 {{#each this}}
-	##teamcity[testSuiteStarted name='{{clean name}}']
+	##teamcity[testSuiteStarted name='|[{{clean keyword}}|] {{clean name}}']
 	{{#each elements}}
-		##teamcity[testSuiteStarted name='{{clean name}}']
+		##teamcity[testSuiteStarted name='|[{{clean keyword}}|] {{clean name}}']
 		{{#each steps}}
-			##teamcity[testStarted name='{{clean keyword}}{{clean name}}' captureStandardOutput='false']
-			{{#if failed}}
-				##teamcity[testFailed name='{{clean keyword}}{{clean name}}' message='{{clean errorMessage}}' details='{{clean stacktrace}}']
-			{{/if}}
-			{{#if pending}}
-				##teamcity[testIgnored name='{{clean keyword}}{{clean name}}' message='']
-			{{/if}}
-			{{#if isTestUndefined}}
-				##teamcity[testIgnored name='{{clean keyword}}{{clean name}}' message='']
-			{{/if}}
-			##teamcity[testFinished name='{{clean keyword}}{{clean name}}' duration='{{milliseconds result.duration}}']
+			{{#unless hidden}}
+				##teamcity[testStarted name='{{clean keyword}} {{clean name}}' captureStandardOutput='false']
+				{{#if failed}}
+					##teamcity[testFailed name='{{clean keyword}} {{clean name}}' message='{{clean errorMessage}}' details='{{clean stacktrace}}']
+				{{/if}}
+				{{#if pending}}
+					##teamcity[testIgnored name='{{clean keyword}} {{clean name}}' message='']
+				{{/if}}
+				{{#if isTestUndefined}}
+					##teamcity[testIgnored name='{{clean keyword}} {{clean name}}' message='']
+				{{/if}}
+				##teamcity[testFinished name='{{clean keyword}} {{clean name}}' duration='{{milliseconds result.duration}}']
+			{{/unless}}
 		{{/each}}
-		##teamcity[testSuiteFinished name='{{clean name}}']
+		##teamcity[testSuiteFinished name='|[{{clean keyword}}|] {{clean name}}']
 	{{/each}}
-	##teamcity[testSuiteFinished name='{{clean name}}']
+	##teamcity[testSuiteFinished name='|[{{clean keyword}}|] {{clean name}}']
 {{/each}}
 </script>
