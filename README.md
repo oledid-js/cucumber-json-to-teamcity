@@ -1,4 +1,4 @@
-# cucumber-json-to-teamcity [![Build Status](https://travis-ci.org/oledid/cucumber-json-to-teamcity.svg?branch=master)](https://travis-ci.org/oledid/cucumber-json-to-teamcity)
+# cucumber-json-to-teamcity [![Build Status](https://travis-ci.org/oledid-js/cucumber-json-to-teamcity.svg?branch=master)](https://travis-ci.org/oledid-js/cucumber-json-to-teamcity)
 
 > Translate a cucumber.js json-report to teamcity service messages
 
@@ -25,9 +25,9 @@ for (let i = 0; i < lines.length; ++i) {
 
 ## Related
 
-- [cucumber-json-to-teamcity-cli](https://github.com/oledid/cucumber-json-to-teamcity-cli) - CLI for this module
+- [cucumber-json-to-teamcity-cli](https://github.com/oledid-js/cucumber-json-to-teamcity-cli) - CLI for this module
 
 
 ## License
 
-MIT © [Ole Morten Didriksen](https://github.com/oledid)
+[MIT](LICENSE)
