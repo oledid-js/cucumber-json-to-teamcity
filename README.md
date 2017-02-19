@@ -1,4 +1,4 @@
-# cucumber-json-to-teamcity [![Build Status](https://travis-ci.org/oledid-js/cucumber-json-to-teamcity.svg?branch=master)](https://travis-ci.org/oledid-js/cucumber-json-to-teamcity) [![npm](https://img.shields.io/npm/dt/express.svg)](https://www.npmjs.com/package/cucumber-json-to-teamcity) [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/cucumber-json-to-teamcity)
+# cucumber-json-to-teamcity [![Build Status](https://travis-ci.org/oledid-js/cucumber-json-to-teamcity.svg?branch=master)](https://travis-ci.org/oledid-js/cucumber-json-to-teamcity) [![npm](https://img.shields.io/npm/dt/cucumber-json-to-teamcity.svg)](https://www.npmjs.com/package/cucumber-json-to-teamcity) [![npm](https://img.shields.io/npm/v/cucumber-json-to-teamvity.svg)](https://www.npmjs.com/package/cucumber-json-to-teamcity)
 
 Translate a cucumber.js json-report to teamcity service messages
 
