@@ -4,7 +4,7 @@
   "description": "Translate a cucumber.js json-report to teamcity service messages",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm run xo && cucumber-js --tags ~@mockup",
+    "test": "npm run xo && cucumber-js --tags \"not @mockup\"",
     "test:mockup": "cucumber-js --tags @mockup",
     "xo": "xo **/*.js",
     "prepublish": "in-publish && npm run test || not-in-publish"
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/oledid-js/cucumber-json-to-teamcity#readme",
   "dependencies": {
-    "cucumber": "^1.2.1",
+    "cucumber": "^3.0.0",
     "handlebars": "^4.0.5"
   },
   "devDependencies": {
