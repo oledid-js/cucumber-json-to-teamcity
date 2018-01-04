@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "npm run xo && cucumber-js --tags ~@mockup",
+    "test:mockup": "cucumber-js --tags @mockup",
     "xo": "xo **/*.js",
     "prepublish": "in-publish && npm run test || not-in-publish"
   },
