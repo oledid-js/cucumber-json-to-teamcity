@@ -59,6 +59,8 @@ function getTagFromType(type) {
 			return "@failing";
 		case "pending":
 			return "@pending";
+		case "skipped":
+			return "@skipped";
 		case "test that throws an error":
 			return "@throws";
 		case "undefined": {
@@ -94,7 +96,12 @@ function processOutput(type, json, callback) {
 			break;
 		case "pending":
 			expect(JSON.parse(json)[0].elements[0].steps[indexOfThenStep].result.status).to.equal("pending");
-			expect(output).to.have.string("##teamcity[testIgnored name='Then the test should be ignored'");
+			expect(output).to.have.string("##teamcity[testIgnored name='Then the test should be pending'");
+			callback();
+			break;
+		case "skipped":
+			expect(JSON.parse(json)[0].elements[0].steps[indexOfThenStep].result.status).to.equal("skipped");
+			expect(output).to.have.string("##teamcity[testIgnored name='Then the test should be skipped'");
 			callback();
 			break;
 		case "test that throws an error":

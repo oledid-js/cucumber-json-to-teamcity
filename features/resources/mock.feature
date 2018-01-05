@@ -20,7 +20,13 @@ Scenario: A failing test
 Scenario: A pending test
 	Given something
 	When something
-	Then the test should be ignored
+	Then the test should be pending
+
+@skipped
+Scenario: A skipped test
+	Given something
+	When something
+	Then the test should be skipped
 
 @throws
 Scenario: A test that throws an error

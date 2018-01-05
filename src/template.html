@@ -9,7 +9,7 @@
 				{{#if failed}}
 					##teamcity[testFailed name='{{clean keyword}} {{clean name}}' message='{{clean errorMessage}}' details='{{clean stacktrace}}']
 				{{/if}}
-				{{#if pending}}
+				{{#if ignored}}
 					##teamcity[testIgnored name='{{clean keyword}} {{clean name}}' message='']
 				{{/if}}
 				{{#if isTestUndefined}}

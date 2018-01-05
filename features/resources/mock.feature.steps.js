@@ -28,13 +28,19 @@ Then(/^the test should (.*)$/, (what, callback) => {
 			break;
 		}
 
+		case "be pending": {
+			callback(null, "pending");
+			break;
+		}
+
+		case "be skipped": {
+			callback(null, "skipped");
+			break;
+		}
+
 		default:
 		case "throw an error": {
 			throw new Error("I am an error");
-		}
-
-		case "be ignored": {
-			callback(null, "pending");
 		}
 	}
 });

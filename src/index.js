@@ -62,7 +62,7 @@ function modifyElements(elements) {
 
 function modifyStep(step) {
 	step.failed = step.result.status === "failed";
-	step.pending = step.result.status === "pending";
+	step.ignored = step.result.status === "pending" || step.result.status === "skipped";
 	step.isTestUndefined = step.result.status === "undefined";
 	step.hidden = step.hidden === true && step.result.status === "passed";
 
