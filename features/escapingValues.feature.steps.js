@@ -32,5 +32,5 @@ Then(/^the haiku should be escaped$/, function (callback) {
 });
 
 Then(/^the unicode string should be escaped$/, callback => {
-	callback(null, "pending");
+	callback(null, "skipped");
 });
