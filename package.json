@@ -7,7 +7,7 @@
     "test": "npm run xo && cucumber-js --tags ~@mockup",
     "test-teamcity": "teamcity-build-number && npm run test-teamcity-xo && npm run test-teamcity-cucumber",
     "test-teamcity-xo": "xo --reporter tap | tap-teamcity",
-    "test-teamcity-cucumber": "cucumber-js --format json | cucumber-json-to-teamcity",
+    "test-teamcity-cucumber": "cucumber-js --tags ~@mockup --format json | cucumber-json-to-teamcity",
     "xo": "xo **/*.js",
     "prepublish": "in-publish && npm run test || not-in-publish"
   },
