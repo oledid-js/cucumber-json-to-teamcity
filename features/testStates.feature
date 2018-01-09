@@ -17,6 +17,11 @@ Scenario: A pending test
 	When I have translated it with this API
 	Then TeamCity should be able to see that it is a pending test
 
+Scenario: A skipped test
+	Given a skipped test
+	When I have translated it with this API
+	Then TeamCity should be able to see that it is a skipped test
+
 Scenario: A test that throws an error
 	Given a test that throws an error
 	When I have translated it with this API

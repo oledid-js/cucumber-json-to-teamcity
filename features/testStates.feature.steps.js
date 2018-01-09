@@ -4,52 +4,52 @@ const childProcess = require("child_process");
 const path = require("path");
 const os = require("os");
 const expect = require("chai").expect;
+const {Given, When, Then} = require("cucumber");
+
 const api = require("../src/index");
 
 const spawn = childProcess.spawn;
 
-module.exports = function () {
-	this.Given(/^an? (.*) test$/, (type, callback) => {
-		this.type = type;
-		callback();
+Given(/^an? (.*) test$/, (type, callback) => {
+	this.type = type;
+	callback();
+});
+
+Given("a test that throws an error", callback => {
+	this.type = "test that throws an error";
+	callback();
+});
+
+When("I have translated it with this API", callback => {
+	callback();
+});
+
+Then(/^TeamCity should be able to see that it is (.*)$/, (testType, callback) => {
+	let json = "";
+
+	const cucumberPath = os.platform() === "win32" ?
+		"../node_modules/.bin/cucumber-js.cmd" :
+		"../node_modules/.bin/cucumber-js";
+
+	const cucumberProcess = spawn(path.join(__dirname, cucumberPath), [
+		"features/resources/mock.feature",
+		"--format",
+		"json",
+		"--tags",
+		getTagFromType(this.type)
+	], {
+		cwd: path.join(__dirname, "../"),
+		encoding: "utf8"
 	});
 
-	this.Given("a test that throws an error", callback => {
-		this.type = "test that throws an error";
-		callback();
+	cucumberProcess.stdout.on("data", data => {
+		json += data.toString();
 	});
 
-	this.When("I have translated it with this API", callback => {
-		callback();
+	cucumberProcess.on("close", () => {
+		processOutput(this.type, json, callback);
 	});
-
-	this.Then(/^TeamCity should be able to see that it is (.*)$/, (testType, callback) => {
-		let json = "";
-
-		const cucumberPath = os.platform() === "win32" ?
-			"../node_modules/.bin/cucumber-js.cmd" :
-			"../node_modules/.bin/cucumber-js";
-
-		const cucumberProcess = spawn(path.join(__dirname, cucumberPath), [
-			"features/resources/mock.feature",
-			"--format",
-			"json",
-			"--tags",
-			getTagFromType(this.type)
-		], {
-			cwd: path.join(__dirname, "../"),
-			encoding: "utf8"
-		});
-
-		cucumberProcess.stdout.on("data", data => {
-			json += data.toString();
-		});
-
-		cucumberProcess.on("close", () => {
-			processOutput(this.type, json, callback);
-		});
-	});
-};
+});
 
 function getTagFromType(type) {
 	switch (type) {
@@ -59,6 +59,8 @@ function getTagFromType(type) {
 			return "@failing";
 		case "pending":
 			return "@pending";
+		case "skipped":
+			return "@skipped";
 		case "test that throws an error":
 			return "@throws";
 		case "undefined": {
@@ -94,7 +96,12 @@ function processOutput(type, json, callback) {
 			break;
 		case "pending":
 			expect(JSON.parse(json)[0].elements[0].steps[indexOfThenStep].result.status).to.equal("pending");
-			expect(output).to.have.string("##teamcity[testIgnored name='Then the test should be ignored'");
+			expect(output).to.have.string("##teamcity[testIgnored name='Then the test should be pending'");
+			callback();
+			break;
+		case "skipped":
+			expect(JSON.parse(json)[0].elements[0].steps[indexOfThenStep].result.status).to.equal("skipped");
+			expect(output).to.have.string("##teamcity[testIgnored name='Then the test should be skipped'");
 			callback();
 			break;
 		case "test that throws an error":
