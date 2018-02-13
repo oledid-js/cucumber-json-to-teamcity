@@ -42,7 +42,7 @@
     "tap-teamcity": "^1.2.1",
     "teamcity-build-number-cli": "0.0.1",
     "xo": "^0.16.0",
-    "cucumber-json-to-teamcity-cli": "^0.2.3"
+    "cucumber-json-to-teamcity-cli": "^0.3.0"
   },
   "xo": {
     "esnext": true,
